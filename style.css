@@ -1,0 +1,280 @@
+:root{
+    /*### Primary*/
+
+    --Red: hsl(4, 100%, 67%);
+
+/*### Neutral*/
+
+    --Blue-800: hsl(234, 29%, 20%);
+    --Blue-700: hsl(235, 18%, 26%);
+    --Grey: hsl(0, 0%,58%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background-color: var(--Blue-700);
+}
+.container{
+    width: 24em;
+    min-height: fit-content;
+    padding: 1em;
+    font-family: Roboto, serif;
+}
+.card{
+    display: block;
+    position: relative;
+    background-color: var(--White);
+}
+.hide{
+    display: none;
+}
+#desktop{
+    display: none;
+}
+#mobile{
+    width: 100%;
+}
+.description{
+    padding: 2em 1.5em;
+    color: var(--Blue-800);
+}
+.description h1{
+    font-size: 2.4em;
+    font-weight: 700;
+}
+.description p{
+    font-size: 0.95em;
+    font-weight: 400;
+    margin: 1.75em auto;
+}
+.list-1, 
+.list-2, 
+.list-3{
+    display: flex;
+    align-items: start;
+    text-align: left;
+    line-height: 1.25em;
+    margin-bottom: 0.9em;
+}
+.list-1 p, 
+.list-2 p, 
+.list-3 p{
+    font-size: 0.95em;
+    font-weight: 400;
+    text-align: left;
+    margin: 0;
+}
+.list{
+    width: 7%;
+    margin-right: 1em;
+}
+
+#form{
+    margin-top: 4em;
+    font-size: 0.75em;
+    color: var(--Blue-800);
+    font-weight: 700;
+}
+input{
+    width: 100%;
+    font-size: 1.25em;
+    padding: 1.25em 1.5em;
+    border-radius: 0.5em;
+    border: 1px solid var(--Grey);
+    margin: 0.5em auto;
+    cursor: pointer;
+}
+
+.invalid{
+    border: 1px solid var(--Red);
+    color: var(--Red);
+    background-color: hsla(4, 100%, 67%, 0.1);
+}
+.error{
+    color: var(--Red);
+    position: absolute;
+    bottom: 15em;
+    right: 2.1em;
+}
+.hidden{
+    display: none;
+}
+
+button{
+    width: 100%;
+    font-size: 1.25em;
+    padding: 1.4em 1.5em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: var(--Blue-800);
+    color: var(--White);
+    font-weight: 700;
+    margin: 0.5em auto;
+}
+button:hover{
+    cursor: pointer;
+    background-color: var(--Red);
+}
+
+.success-message{
+    padding: 1.5em;
+    background-color: var(--White);
+}
+.removed{
+    display: none;
+}
+.success-message img{
+    margin: 8em auto 2em auto;
+}
+.success-message h1{
+    font-size: 2.25em;
+}
+.success-message p{
+    font-size: 1em;
+    line-height: 1.4em;
+    margin: 1.5em auto 15em auto;
+}
+.success-message button{
+    font-size: 0.9em;   
+}
+
+@media (min-width: 48em){
+    .container{
+        width: 48em;
+        background-color: var(--Blue-700);
+        justify-items: center;
+    }
+    .card{
+        width: 46em;
+        background-color: var(--White);
+    }
+    .hide{
+        display: none;
+    }
+    .description h1{
+        font-size: 3em;
+    }
+    .description p{
+        font-size: 1.25em;
+    }
+    .list-1, 
+    .list-2, 
+    .list-3{
+        align-items: center;
+    }
+    .list{
+        width: 5%;
+    }
+    #form{
+        font-size: 1em;
+    }
+    .error{
+        bottom: 14em;
+    }
+    .success-message{
+        justify-content: center;
+        width: 26em;
+        background-color: white;
+        border-radius: 1em;
+        margin: 5em;
+        padding: 3.5em;
+    }
+    .success-message img{
+        width: 15%;
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+    .success-message h1{
+        font-size: 2.25em;
+    }
+    .success-message p{
+        margin-bottom: 2em;
+        font-size: 0.8em;
+    }
+}
+
+@media (min-width:60em){
+    .container{
+        width: 60em;
+    }
+    .card{
+        width: 58em;
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 1.5em;
+        border-radius: 2em;
+    }
+    .hide{
+        display: none;
+    }
+    #mobile{
+        display: none;
+    }
+    #desktop{
+        display: block;
+    }
+    .description{
+        padding: 3em;
+    }
+    .description h1{
+        font-size: 3.5em;
+    }
+    .description p{
+        font-size: 1em;
+    }
+    #form{
+        font-size: 0.85em;
+        margin-top: 4em;
+    }
+    input, button{
+        font-size: 1.2em;
+    }
+    .error{
+        bottom: 18.1em;
+        left: 24em;
+    }
+}
+
+@media(min-width:90em){
+    .container{
+        width: 90em;
+    }
+    .card{
+        width: 60em;
+        margin: 2em;
+    }
+    .hide{
+        display: none;
+    }
+    .error{
+        left: 27em;
+    }
+    .success-message{
+        margin: 5em auto;
+        width: 34em;
+        border-radius: 2em;
+    }
+    .success-message img{
+        width: 15%;
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+    .success-message h1{
+        font-size: 3.5em;
+    }
+    .success-message p{
+        margin-bottom: 2em;
+        font-size: 1.2em;
+    }
+    .success-message button{
+        font-size: 1em;
+    }
+}

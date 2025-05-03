@@ -27,6 +27,7 @@ body{
     min-height: fit-content;
     padding: 1em;
     font-family: Roboto, serif;
+    position: relative;
 }
 .card{
     display: block;
@@ -127,6 +128,9 @@ button:hover{
 .success-message{
     padding: 1.5em;
     background-color: var(--White);
+    position: absolute;
+    width: 22em;
+    top: 0;
 }
 .removed{
     display: none;
@@ -151,8 +155,10 @@ button:hover{
         width: 48em;
         background-color: var(--Blue-700);
         justify-items: center;
+        position: relative;
     }
     .card{
+        display: noe;
         width: 46em;
         background-color: var(--White);
     }
@@ -179,6 +185,14 @@ button:hover{
     .error{
         bottom: 14em;
     }
+    .blur-bg{
+        background-color: hsla(234, 29%, 20%, 0.5);
+        width: 48em;
+        height: 76em;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
     .success-message{
         justify-content: center;
         width: 26em;
@@ -186,6 +200,8 @@ button:hover{
         border-radius: 1em;
         margin: 5em;
         padding: 3.5em;
+        top: 20em;
+        left: 7em;
     }
     .success-message img{
         width: 15%;
@@ -241,6 +257,17 @@ button:hover{
         bottom: 18.1em;
         left: 24em;
     }
+    .blur-bg{
+        width: 60em;
+        height: 42em;
+        bottom: 0;
+        right: 0;
+    }
+    .success-message{
+        top: 2em;
+        left: 12em;
+        border-radius: 2em;
+    }
 }
 
 @media(min-width:90em){
@@ -261,6 +288,8 @@ button:hover{
         margin: 5em auto;
         width: 34em;
         border-radius: 2em;
+        bottom: 2em;
+        left: 28em;
     }
     .success-message img{
         width: 15%;
@@ -268,13 +297,17 @@ button:hover{
         margin-bottom: 1em;
     }
     .success-message h1{
-        font-size: 3.5em;
+        font-size: 2.75em;
     }
     .success-message p{
-        margin-bottom: 2em;
-        font-size: 1.2em;
+        margin-bottom: 1.5em;
+        font-size: 1em;
     }
     .success-message button{
         font-size: 1em;
+    }
+    .blur-bg{
+        width: 90em;
+        height: 46em;
     }
 }

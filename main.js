@@ -6,7 +6,7 @@ const isValidEmail = (email) => {
 const form = document.getElementById('form')
 const emailInput = document.getElementById('email')
 const wholePage = document.getElementById('card')
-const successPage = document.querySelector('.success-message')
+const successPage = document.querySelector('.blur-bg')
 const dismissMessage = document.getElementById('dismiss')
 
 let isValidationOn = false
@@ -33,7 +33,7 @@ const resetForm = () => {
     const errorDiv = emailInput.nextElementSibling;
     errorDiv.classList.add('hidden');
     successPage.classList.add('removed');
-    wholePage.classList.remove('hide');
+    /*wholePage.classList.remove('hide');*/
   };
 
 form.addEventListener('submit', (e) =>{
@@ -42,7 +42,7 @@ form.addEventListener('submit', (e) =>{
     isValidationOn = true;
 
     if(isFormValid) {
-        wholePage.classList.add('hide');
+        /*wholePage.classList.add('hide');*/
         successPage.classList.remove('removed');
     }
 });

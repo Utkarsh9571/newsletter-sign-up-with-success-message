@@ -38,8 +38,8 @@ const resetForm = () => {
 
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
-    validateInputs();
     isValidationOn = true;
+    validateInputs();
 
     if(isFormValid) {
         /*wholePage.classList.add('hide');*/
